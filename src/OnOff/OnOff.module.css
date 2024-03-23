@@ -1,0 +1,29 @@
+.buttonBlock {
+  padding: 10px;
+}
+
+.circleOn {
+  border-radius: 50%;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  background-color: greenyellow;
+}
+
+.circleOff {
+  border-radius: 50%;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  background-color: darkred;
+}
+
+.buttonOn {
+  background-color: greenyellow;
+}
+
+.buttonOff {
+  background-color: darkred;
+}
