@@ -17,7 +17,7 @@ function App() {
       <Accordion
         titleValue="Menu"
         collapsed={accordionCollapsed}
-        onClick={() => setAccordionCollapsed(!accordionCollapsed)}
+        onChange={() => setAccordionCollapsed(!accordionCollapsed)}
       />
       {/* <OnOff on={switchON} onChange={setSwitchOn} /> */}
       <UncontrolledOnOff onChange={setSwitchOn} /> {switchON.toString()}

@@ -1,7 +1,7 @@
 type AccorionPropsType = {
   titleValue: string;
   collapsed: boolean;
-  onClick: () => void;
+  onChange: () => void;
 };
 
 export function Accordion(props: AccorionPropsType) {
@@ -9,7 +9,7 @@ export function Accordion(props: AccorionPropsType) {
 
   return (
     <div>
-      <AccordionTitle title={props.titleValue} onClick={props.onClick} />
+      <AccordionTitle title={props.titleValue} onChange={props.onChange} />
       {!props.collapsed && <AccordionBody />}
     </div>
   );
@@ -17,12 +17,12 @@ export function Accordion(props: AccorionPropsType) {
 
 type AccordionTitle = {
   title: string;
-  onClick: () => void;
+  onChange: () => void;
 };
 
 function AccordionTitle(props: AccordionTitle) {
   console.log("AccordionTitle rendering");
-  return <h3 onClick={props.onClick}>{props.title}</h3>;
+  return <h3 onClick={(event) => props.onChange()}>{props.title}</h3>;
 }
 
 function AccordionBody() {
