@@ -16,5 +16,8 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "src/UncontrolledAccordion/UncontrolledAccordion.tsx"]
+  "include": [
+    "src",
+    "src/components/UncontrolledAccordion/UncontrolledAccordion.tsx"
+  ]
 }

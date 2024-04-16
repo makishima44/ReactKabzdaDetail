@@ -1,4 +1,3 @@
-import type { Meta } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Accordion } from "./Accordion";
 import { useState } from "react";
@@ -8,6 +7,7 @@ export default {
 };
 
 const onCHangeCallpack = action("хуй");
+const onClickCallback = action("some item was clicked");
 
 export const CollapsedAccordion = () => {
   return (
@@ -15,6 +15,8 @@ export const CollapsedAccordion = () => {
       titleValue={"Collapsed Accordion"}
       collapsed={true}
       onChange={onCHangeCallpack}
+      items={[]}
+      onClick={onClickCallback}
     />
   );
 };
@@ -25,6 +27,13 @@ export const OpenedAccordion = () => {
       titleValue={"Opened Accordion"}
       collapsed={false}
       onChange={() => {}}
+      items={[
+        { title: "Dimych", value: 1 },
+        { title: "Valera", value: 2 },
+        { title: "Artem", value: 3 },
+        { title: "Victor", value: 4 },
+      ]}
+      onClick={onClickCallback}
     />
   );
 };
@@ -38,6 +47,13 @@ export const AccordionDemo = () => {
       onChange={() => {
         setCollapsed(!collapsed);
       }}
+      items={[
+        { title: "Dimych", value: 1 },
+        { title: "Valera", value: 2 },
+        { title: "Artem", value: 3 },
+        { title: "Victor", value: 4 },
+      ]}
+      onClick={onClickCallback}
     />
   );
 };
