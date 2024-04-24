@@ -1,3 +1,5 @@
+import React from "react";
+
 type ItemType = {
   title: string;
   value: any;
@@ -24,22 +26,30 @@ export function Accordion(props: AccorionPropsType) {
   );
 }
 
+//------------------------------------------------------------------------------//
+
 type AccordionTitle = {
   title: string;
   onChange: () => void;
 };
 
-function AccordionTitle(props: AccordionTitle) {
+const AccordionTitle = React.memo(AccordionTitleMemo);
+
+function AccordionTitleMemo(props: AccordionTitle) {
   console.log("AccordionTitle rendering");
   return <h3 onClick={(event) => props.onChange()}>{props.title}</h3>;
 }
+
+//---------------------------------------------------------------------------//
 
 type AccorionBodyPropsType = {
   items: ItemType[];
   onClick: (value: any) => void;
 };
 
-function AccordionBody(props: AccorionBodyPropsType) {
+const AccordionBody = React.memo(AccordionBodyMemo);
+
+function AccordionBodyMemo(props: AccorionBodyPropsType) {
   console.log("AccordionTitle rendering");
   return (
     <ul>

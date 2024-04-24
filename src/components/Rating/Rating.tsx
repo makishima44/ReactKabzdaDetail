@@ -1,3 +1,5 @@
+import React from "react";
+
 export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 4 | 5;
 
 type RatingPropsType = {
@@ -25,7 +27,9 @@ type StarPropsType = {
   onClick: (value: RatingValueType) => void;
 };
 
-function Star(props: StarPropsType) {
+const Star = React.memo(StarMemo);
+
+function StarMemo(props: StarPropsType) {
   console.log("Star rendering");
 
   return (

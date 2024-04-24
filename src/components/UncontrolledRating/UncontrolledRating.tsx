@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 export function UncontrolledRating() {
@@ -5,6 +6,8 @@ export function UncontrolledRating() {
 
   let [value, setValue] = useState(0);
 
+
+  
   return (
     <div>
       <Star
@@ -46,7 +49,9 @@ type StarPropsType = {
   setValue: () => void;
 };
 
-function Star(props: StarPropsType) {
+const Star = React.memo(StarMemo);
+
+function StarMemo(props: StarPropsType) {
   console.log("Star rendering");
 
   return (

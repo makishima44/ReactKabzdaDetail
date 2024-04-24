@@ -4,6 +4,7 @@ import { useState, KeyboardEvent, useEffect } from "react";
 type ItemType = {
   title: string;
   value: any;
+  countryId?: number;
 };
 
 type SelectPropType = {
