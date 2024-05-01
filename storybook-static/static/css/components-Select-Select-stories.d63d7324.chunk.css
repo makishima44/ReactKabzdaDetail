@@ -1,0 +1,25 @@
+.Select_select__Jqbip span.Select_main__f4J4- {
+  border: 1px solid black;
+  display: inline-block;
+  min-height: 20px;
+  width: 100x;
+  min-width: 40px;
+}
+
+.Select_items__x5DaO {
+  position: absolute;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.Select_select__Jqbip.Select_active__YPAev .Select_items__x5DaO {
+  display: block;
+}
+
+.Select_item__pf7S9.Select_selected__IRxQk {
+  background-color: blue;
+  color: white;
+}
+
+
+/*# sourceMappingURL=components-Select-Select-stories.d63d7324.chunk.css.map*/
