@@ -44,7 +44,7 @@ export const SetTimeoutExample = () => {
 
   useEffect(() => {
     setInterval(() => {
-      console.log("tick: " + counter);
+      // console.log("tick: " + counter);
       setCounter((state) => state + 1);
     }, 1000);
   }, []);
@@ -67,7 +67,9 @@ export const Watch = () => {
   const [watch, setWatch] = useState(getTime());
 
   useEffect(() => {
+    console.log("useeffect");
     setInterval(() => {
+      console.log("setInterval");
       setWatch(getTime());
     }, 1000);
   }, []);
