@@ -5,11 +5,18 @@ export default {
   component: Clock,
 };
 
-export const BaseExample = () => {
+export const DigitalClockModeExample = () => {
   return (
     <>
       <Clock mode="digital" />
-      <Clock mode="asd" />
+    </>
+  );
+};
+
+export const AnalogClockModeExample = () => {
+  return (
+    <>
+      <Clock mode="analog" />
     </>
   );
 };
